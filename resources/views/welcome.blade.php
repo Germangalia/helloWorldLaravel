@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Hola món!</div>
+                <div class="title">Hola German!</div>
             </div>
         </div>
     </body>

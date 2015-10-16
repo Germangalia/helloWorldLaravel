@@ -16,8 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/helloworld', "HolaMonController@hello");
+Route::get('/helloworld', "HolaMon@hello");
 
-Route::get('/helloworld2', "HolaMonController@hello2");
+Route::get('/helloworld2', "HolaMon@hello2");
 
-Route::get('/helloworld3', "HolaMonController2@hello");
+Route::get('/helloworld3', "HolaMon@hello");
+
+Route::resource('user', 'UserController');
