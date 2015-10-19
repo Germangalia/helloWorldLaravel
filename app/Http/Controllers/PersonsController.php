@@ -6,8 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class PersonsController extends Controller
 {
+    /**
+     * PersonsController constructor.
+     */
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +44,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd(Input::input('dni'));
+        //
     }
 
     /**
@@ -70,7 +78,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo 'update';
     }
 
     /**
@@ -81,6 +89,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo "$id destroyed ok!";
     }
 }
