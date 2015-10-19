@@ -68,3 +68,23 @@ Route::get('prova7', function () {
         ->header('Content-Type', $contentType)
         ->header('HyHeader', 'HOLA');
 });
+
+Route::get('prova8', function () {
+    $pathToFolder = public_path('prova.pdf');
+    dd($pathToFolder);
+    return response()->download($pathToFolder);
+});
+
+Route::get('prova9', function () {
+    return response()->json([
+        'name' => 'Abigale', 'state' => 'CA' ]);
+});
+
+Route::get('prova10', function () {
+    return response()->json([
+        'name' => 'Abigale', 'state' => 'CA' ]);
+});
+
+Route::get('prova11', function () {
+    return redirect('http://www.google.com');
+});
