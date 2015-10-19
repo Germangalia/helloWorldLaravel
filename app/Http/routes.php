@@ -47,7 +47,7 @@ Route::get('prova3', function () {
 Route::get('prova4', function () {
     $content = '<h1>Hello World!</h1>';
     $status = 200;
-    $contentType = "text/pdf";
+    $contentType = "aplication/pdf";
     return response($content, $status)
         ->header('Content-Type', $contentType);
 });
@@ -58,4 +58,13 @@ Route::get('prova5', function () {
     $contentType = "text/plain";
     return response($content, $status)
         ->header('Content-Type', $contentType);
+});
+
+Route::get('prova7', function () {
+    $content = '<h1>Hello World!</h1>';
+    $status = 200;
+    $contentType = "text/plain";
+    return response($content, $status)
+        ->header('Content-Type', $contentType)
+        ->header('HyHeader', 'HOLA');
 });
