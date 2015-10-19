@@ -23,3 +23,7 @@ Route::get('/helloworld2', "HolaMon@hello2");
 Route::get('/helloworld3', "HolaMon@hello");
 
 Route::resource('user', 'UserController');
+
+Route::get('prova1', function () {
+    return '<h1>Hello World!</h1>';
+});
